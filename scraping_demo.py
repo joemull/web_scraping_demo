@@ -128,6 +128,10 @@ class Fox():
 
 def manage_scraping(row,cache,fox):
 
+    """
+    Takes a row (pandas Series) and iterates over the data needed to form URLs. If conditions are met, makes the scraping request and adds the resulting data to the row
+    """
+
     description_found = False
 
     for isbn_format in ["ebook","hardcover","paper"]:
@@ -159,6 +163,11 @@ def manage_scraping(row,cache,fox):
     return row
 
 def manage_apply():
+
+    """
+    Handles opening the input file, opening the cache file, iterating over the input rows, and forming the output file(s)
+    """
+
     spreadsheet = pd.read_excel("metadata.xlsx",dtype=str)
 
     new_headers = [
@@ -216,7 +225,7 @@ def manage_apply():
 def text_with_newlines(elem):
 
     '''
-    A custom alternative to BeautifulSoup's string methods that keeps line breaks represented by div and br elements. Whitespace and line breaks in JADE transcriptions are often used to represent spatial distance in the analog page.
+    A custom alternative to BeautifulSoup's string methods that keeps line breaks represented by div and br elements.
     Credit: https://gist.github.com/zmwangx/ad0830ba94b1fd98f428
     '''
 
