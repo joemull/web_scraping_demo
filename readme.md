@@ -1,5 +1,7 @@
 # Using Web Scraping to Enrich Metadata
 
+Watch the [3-minute YouTube video from the Library Publishing Forum, May 13, 2021](https://youtu.be/rRhX2R1f_Wc).
+
 ## Context and rationale
 At the University of Michigan Library we manage [ACLS Humanities E-Book](https://www.fulcrum.org/heb), a collection of over 5,000 foundational books in the humanities mostly published by North American university presses, with whom we partner to license the collection. We are enriching the metadata as part of our current Mellon grant. Some of the data we want, like book descriptions, is missing, but we know it's public elsewhere on the internet, including on many university press websites.
 
